@@ -273,7 +273,6 @@ export default function ComparativoPage() {
                   }
                   contentStyle={{ borderRadius: "8px", fontSize: "12px" }}
                 />
-                {barData.map((_, i) => null && i && null)}
                 <Bar
                   dataKey="value"
                   name={metricaLabel}
