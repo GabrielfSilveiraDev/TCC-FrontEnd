@@ -1,0 +1,12 @@
+node_modules
+dist
+dist-ssr
+*.local
+.env
+.env.*
+!.env.example
+
+
+# Artefatos de build do TypeScript e configuração da IDE
+*.tsbuildinfo
+.idea/
