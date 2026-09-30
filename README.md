@@ -1,6 +1,6 @@
 # Dashboard — Remuneração de Servidores Públicos
 
-> **EN:** React + TypeScript dashboard from an undergraduate thesis (Information Systems, UFSC) for exploring the payroll of staff at 7 Brazilian State Courts of Accounts (ES, MG, PR, RJ, RS, SC, SP). It consumes a FastAPI backend that is not public yet.
+> **EN:** React + TypeScript dashboard from an undergraduate thesis (Information Systems, UFSC) for exploring the payroll of staff at 7 Brazilian State Courts of Accounts (ES, MG, PR, RJ, RS, SC, SP). It consumes a FastAPI backend whose code is not public.
 
 > TCC — Sistemas de Informação | UFSC
 
@@ -10,12 +10,12 @@ Dashboard analítico para comparar remunerações de servidores dos Tribunais de
 
 Este repositório é a última etapa (visualização) do pipeline do TCC:
 
-```
+```text
 web scraping (Python) → normalização → data warehouse → API REST (FastAPI) → dashboard (este repositório)
 ```
 
 - **Coleta:** os scrapers e os dados brutos estão em [GabrielfSilveiraDev/TCC](https://github.com/GabrielfSilveiraDev/TCC).
-- **Normalização, data warehouse e API FastAPI:** ainda não são públicos. Este repositório contém apenas o front-end; para exibir dados, ele precisa de uma API que implemente os [endpoints esperados](#endpoints-esperados-na-api).
+- **Normalização, data warehouse e API FastAPI:** o código dessas etapas não é público. Este repositório contém apenas o front-end; para exibir dados, ele precisa de uma API que implemente os [endpoints esperados](#endpoints-esperados-na-api).
 
 ## Stack
 
@@ -28,8 +28,8 @@ web scraping (Python) → normalização → data warehouse → API REST (FastAP
 | Tabelas | TanStack Table v8 |
 | Gráficos | Recharts |
 | Roteamento | React Router v6 |
-| HTTP Client | Axios |
-| Backend (consumido) | FastAPI (Python) — ainda não público |
+| Cliente HTTP | Axios |
+| Backend (consumido) | FastAPI (Python) — código não público |
 
 ## Páginas
 
@@ -89,7 +89,7 @@ cp .env.example .env
 
 | Variável | Padrão | Descrição |
 |---|---|---|
-| `VITE_API_URL` | `/api` | Base URL da API FastAPI (em produção, informe a URL completa) |
+| `VITE_API_URL` | `/api` | URL base da API FastAPI, sem barra final (em produção, informe a URL completa) |
 
 ## Endpoints esperados na API
 
@@ -112,7 +112,7 @@ Rotas relativas a `VITE_API_URL`:
 
 ### Parâmetros de paginação
 
-```
+```text
 GET /servidores?page=1&page_size=25&nome=joao&estado=SC&sort_by=remuneracao_bruta&sort_order=desc
 ```
 
